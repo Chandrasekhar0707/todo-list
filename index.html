@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TASK — Smart To-Do</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Editorial serif + clean mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Lucide icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="app-header">
+    <div class="header-left">
+      <span class="logo">TASK</span>
+      <span class="tagline">— get things done.</span>
+    </div>
+    <div class="header-right">
+      <!-- Dark/Light mode toggle -->
+      <button id="themeToggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">
+        <i data-lucide="sun" class="icon-sun"></i>
+        <i data-lucide="moon" class="icon-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="app-main">
+
+    <!-- Stats bar -->
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-num" id="statTotal">0</span>
+        <span class="stat-label">total</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" id="statPending">0</span>
+        <span class="stat-label">pending</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" id="statDone">0</span>
+        <span class="stat-label">done</span>
+      </div>
+    </div>
+
+    <!-- Search + Add input area -->
+    <div class="input-area">
+      <div class="search-wrapper">
+        <i data-lucide="search" class="search-icon"></i>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search tasks…"
+          autocomplete="off"
+        />
+      </div>
+      <div class="add-task-wrapper">
+        <input
+          type="text"
+          id="taskInput"
+          class="task-input"
+          placeholder="Add a new task…"
+          maxlength="120"
+          autocomplete="off"
+        />
+        <button id="addBtn" class="add-btn" title="Add task">
+          <i data-lucide="plus"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter tabs -->
+    <nav class="filter-tabs" role="tablist" aria-label="Filter tasks">
+      <button class="filter-tab active" data-filter="all" role="tab">All</button>
+      <button class="filter-tab" data-filter="pending" role="tab">Pending</button>
+      <button class="filter-tab" data-filter="completed" role="tab">Completed</button>
+    </nav>
+
+    <!-- Task list -->
+    <ul id="taskList" class="task-list" aria-label="Task list">
+      <!-- Tasks injected by JS -->
+    </ul>
+
+    <!-- Empty state -->
+    <div id="emptyState" class="empty-state hidden">
+      <i data-lucide="clipboard-list" class="empty-icon"></i>
+      <p class="empty-title">Nothing here yet.</p>
+      <p class="empty-sub">Add a task above to get started.</p>
+    </div>
+
+    <!-- Clear completed button -->
+    <div class="list-footer" id="listFooter">
+      <button id="clearCompleted" class="clear-btn">
+        <i data-lucide="trash-2"></i> Clear completed
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ===== EDIT MODAL ===== -->
+  <div id="editModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-label="Edit task">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title">Edit Task</span>
+        <button id="closeModal" class="icon-btn" aria-label="Close modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <input type="text" id="editInput" class="edit-input" maxlength="120" />
+      <div class="modal-actions">
+        <button id="cancelEdit" class="btn-secondary">Cancel</button>
+        <button id="saveEdit" class="btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
