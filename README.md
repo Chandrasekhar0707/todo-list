@@ -20,7 +20,7 @@ A simple and responsive To-Do List web application built using HTML, CSS, and Ja
 
 ## 🌐 Live Demo
 
-👉 https://Chandrasekhar0707.github.io/todo-list/
+👉 https://Chandrasekhar0707/github.io/todo-list/
 
 ## 📂 Installation & Usage
 
