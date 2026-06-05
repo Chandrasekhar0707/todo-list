@@ -20,7 +20,7 @@ A simple and responsive To-Do List web application built using HTML, CSS, and Ja
 
 ## 🌐 Live Demo
 
-👉 https://Chandrasekhar0707/github.io/todo-list/
+👉 https://todolist-taskapp.netlify.app/
 
 ## 📂 Installation & Usage
 
@@ -34,6 +34,9 @@ A simple and responsive To-Do List web application built using HTML, CSS, and Ja
 ## 📌 Future Improvements
 
 * Add task categories
+* Add Dark mode and Light mode function button
+* Added Task and quick setup
+* Showing pending or complete tasks
 
 ## 🙌 Author
 
