@@ -16,22 +16,18 @@ A simple and responsive To-Do List web application built using HTML, CSS, and Ja
 
 * HTML5
 * CSS3
-* JavaScript (Vanilla JS)
-
-## 📸 Screenshot
-
-(Add your project screenshot here)
+* JavaScript
 
 ## 🌐 Live Demo
 
-👉 https://your-username.github.io/todo-list/
+👉 https://Chandrasekhar0707.github.io/todo-list/
 
 ## 📂 Installation & Usage
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/todo-list.git
+   git clone https://github.com/Chandrasekhar0707/todo-list.git
    ```
 2. Open `index.html` in your browser
 
@@ -41,7 +37,7 @@ A simple and responsive To-Do List web application built using HTML, CSS, and Ja
 
 ## 🙌 Author
 
-* Your Name
+* Chandrasekhar Samal
 
 ## ⭐ Show your support
 
